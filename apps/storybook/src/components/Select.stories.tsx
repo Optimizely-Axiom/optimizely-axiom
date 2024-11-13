@@ -310,7 +310,7 @@ export const SecondaryTrigger: Story<string> = {
     children: (
       <>
         <SelectTrigger asChild>
-          <FilterMenuButton caption="Environment">
+          <FilterMenuButton label="Environment">
             <SelectValue />
           </FilterMenuButton>
         </SelectTrigger>
