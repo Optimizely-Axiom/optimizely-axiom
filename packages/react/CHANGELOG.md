@@ -1,5 +1,12 @@
 # @optiaxiom/react
 
+## 0.11.2
+
+### Patch Changes
+
+- 761d4cd: remove default transition from spinner
+- a0c01dd: fix pointer source for command toggle button
+
 ## 0.11.1
 
 ### Patch Changes
