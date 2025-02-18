@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Field, Flex, Text } from "@optiaxiom/react";
 import {
+  FilterMenuButton,
   Select,
   SelectContent,
   SelectGroup,
@@ -299,5 +300,34 @@ export const AsyncLoading: Story = {
         </SelectContent>
       </Select>
     );
+  },
+};
+
+const environments = ["Development", "QA", "Stage", "Production"];
+
+export const SecondaryTrigger: Story<string> = {
+  args: {
+    children: (
+      <>
+        <SelectTrigger asChild>
+          <FilterMenuButton label="Environment">
+            <SelectValue />
+          </FilterMenuButton>
+        </SelectTrigger>
+
+        <SelectContent>
+          {environments.map((item, index) => {
+            return (
+              <SelectRadioItem item={item} key={index}>
+                {item}
+              </SelectRadioItem>
+            );
+          })}
+        </SelectContent>
+      </>
+    ),
+    defaultOpen: true,
+    defaultValue: "Production",
+    items: environments,
   },
 };
